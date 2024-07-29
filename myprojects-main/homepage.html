@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudra Wankhede</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *:root {
+            --main-colour: #FEE715;
+            --side-colour: #101820;
+            color: white;
+            text-decoration: none;
+
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: var(--side-colour);
+            scroll-behavior: smooth;
+
+            gap: 0;
+
+        }
+
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        /* navbar css */
+        .navbar {
+            overflow: hidden;
+            background-color: var(--main-colour);
+            position: fixed;
+        }
+
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+
+        .navbar a:hover {
+            background-color: var(--main-colour);
+        }
+
+
+        .navbar a.active {
+            background-color: var(--main-colour);
+        }
+
+
+        @media screen and (max-width: 600px) {
+            .navbar a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+
+
+        .content {
+            padding: 20px;
+        }
+
+
+        h2 {
+
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+
+        p {
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+
+        .navName {
+
+            font-size: 30px;
+            color: var(--main-colour);
+
+        }
+
+
+
+        /* home css */
+        .intro {
+            margin-top: -262px;
+            text-align: left;
+            margin-left: 6%;
+        }
+
+
+        .my-img {
+            height: 60vh;
+            width: 30vw;
+            margin-top: 60px;
+            margin-left: 60%;
+            border-radius: 20px;
+
+
+        }
+
+        .my-img {
+            filter: drop-shadow(5px 5px 10px #FEE715);
+        }
+
+        span {
+            color: var(--main-colour);
+        }
+
+        span::before {
+            content: "Rudra";
+            animation: animate infinite 10s;
+            padding-left: 10px;
+        }
+
+        @keyframes animate {
+
+            16% {
+                content: "Full Stack Developer";
+            }
+
+            32% {
+                content: "UI/UX Designer";
+            }
+
+            48% {
+                content: "App Designer";
+            }
+
+            64% {
+                content: "Web Desingner";
+            }
+
+            80% {
+                content: "Graphic Desingner";
+            }
+        }
+
+        i {
+            font-size: 20px;
+            color: var(--main-colour);
+        }
+
+
+
+
+
+        /* about css */
+        #About {
+            padding: 250px;
+            margin-bottom: 30%;
+        }
+
+        .skeleton {
+
+            height: 50vh;
+            width: 20vw;
+            margin-left: -20%;
+            margin-top: 7%;
+
+        }
+
+        .about-me-text {
+            margin-top: -5%;
+            margin-left: 30%;
+            color: var(--main-colour);
+            font-size: 55px;
+        }
+
+        .skeleton:hover {
+            box-shadow: 0 0 25px var(--main-colour),
+                0 0 35px var(--main-colour),
+                0 0 45px var(--main-colour)
+        }
+
+        .education-skills {
+            margin-left: 20%;
+            color: var(--main-colour);
+        }
+
+
+        /* project */
+        #Projects {
+            margin-top: -30%;
+            padding: 0px 0px 300px;
+
+        }
+
+        #portfilio {
+            padding: 50px 0;
+        }
+
+        .sub-title {
+            font-size: 55px;
+            color: var(--main-colour);
+            margin-left: 40%;
+            font-weight: 700;
+        }
+
+        .work-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            margin-top: 50px;
+        }
+
+        .work {
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .work img {
+            width: 25vw;
+            border-radius: 10px;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .layer {
+            width: 100%;
+            height: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), #FEE715);
+            border-radius: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 40px;
+            text-align: center;
+            font-size: 14px;
+            transition: height 0.5s;
+        }
+
+        .layer h3 {
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .work:hover img {
+            transform: scale(1.1);
+
+        }
+
+        .work:hover .layer {
+            height: 100%;
+        }
+
+        /* Contact Section */
+        #Contact {
+            margin-bottom: -70%;
+            margin-top: -15%
+        }
+
+        .Connect {
+            font-size: 60px;
+            color: var(--main-colour);
+            margin-left: 40%;
+            font-weight: 700;
+            margin-top: 10%;
+        }
+
+        #Contact i {
+            font-size: 50px;
+            padding: 0px 0px 0px 150px;
+
+            color: white;
+        }
+
+        .icon {
+            display: flex;
+            flex-direction: row;
+            margin-left: 8.5%;
+        }
+
+        .Alias {
+            margin-left: 55%;
+            width: 225px;
+            height: 30px;
+        }
+
+        .form {
+            margin-right: 40%;
+        }
+
+        .ContactNo {
+            margin-right: -30%;
+            width: 225px;
+            height: 30px;
+        }
+
+        .Message {
+            margin-left: -20%;
+            margin-bottom: -30%;
+            color: white;
+
+        }
+
+
+        /* copyright */
+        .copyright{
+            height: 80px;
+            width: 100%;
+            background-color: #686D76;
+            margin-top: 30%;
+        }
+
+        .bx-copyright{
+            font-size: 50px;
+            width: 0%;
+        }
+    </style>
+    <script>
+        function Education() {
+            let y = document.getElementById("click").innerHTML = "Education";
+            alert("Education Current==> 8th std katol")
+        }
+        function Skills() {
+            let x = document.getElementById("clickOne").innerHTML = "Skills";
+            alert("UI/UX Design / Web designer / App designer / Full Stack Developer")
+        }
+        function Skills() {
+            let x = document.getElementById("clickTwo").innerHTML = "Experience";
+            alert("HTML--80%  CSS--70%    Java Script--40%")
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <!-- navbar code -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Contact">Connect Me</a>
+        <h1 class="navName">Rudra Wankhede</h1>
+    </div>
+
+
+    <!-- home section -->
+
+    <!-- my img -->
+    <div>
+        <img class="my-img" src="image-folder/kajuupic.JPEG" alt="">
+    </div>
+
+
+    <!-- intro -->
+    <div class="intro" id="home">
+        <h2>Hello, MySelf</h2>
+        <h1>Kajal Bhoyar </h1>
+        <h1>I am <span></span></h1>
+        <br>
+        <a href="https://github.com/Rudra1007/rudra_full_stack_developer"><i class='bx bxl-github'></i></a>
+        <a href="https://join.skype.com/invite/tE4ib6Co3tq6"><i class='bx bxl-skype'></i></a>
+        <a href="https://stackoverflow.com/"><i class='bx bxl-stack-overflow'></i></a>
+        <a href="https://www.linkedin.com/in/rudra-wankhede-709333314"><i class='bx bxl-linkedin'></i></a>
+    </div>
+    <br>
+    <br>
+
+
+    <!-- about -->
+    <div id="About">
+        <h2 class="about-me-text">About Me</h2>
+        <img class="skeleton" src="./skeleton Background Removed.png" alt="">
+        <p style="margin-left: 20%; margin-top: -38%;">My name's is Kajal M. Bhoyar.<br>
+            I Live at Isapur (BK),TA-Katol, DIS-Nagpur, STATE-Maharashtra<br>
+            I am 18 years old.<br>
+            My hoby is Dancing.<br> And,<br> i am the best Dancer to myself.
+          </p>
+        <br>
+        <h3 id="click" onclick="Education()" class="education-skills">Education</h3> <br>
+        <h3 id="clickOne" onclick="Skills()" class="education-skills">Skills</h3> <br>
+        <h3 id="clickTwo" onclick="Experience()" class="education-skills">Experience</h3>
+    </div>
+
+
+    <!-- projects -->
+
+    <div id="Projects">
+
+        <div class="container">
+            <div class="sub-title">MyWork</div>
+            <div class="work-list">
+                <div class="work">
+                    <a href="./chessopen.html"><img src="./royal gambit.jpg   " alt="">
+                        <div class="layer">
+                            <h3>Royal Gambit</h3>
+                            <p>Chess is an abstract strategy game that involves no hidden information and no elements of
+                                chance.</p>
+                        </div>
+
+                </div></a>
+
+                <div class="work">
+                    <a href="./whatsapp.html"><img src="./whatsappppppp.jpg" alt="">
+                        <div class="layer">
+                            <h3>Whatsapp</h3>
+                            <p>WhatsApp (officially WhatsApp Messenger) is an instant messaging (IM) and voice-over-IP
+                                (VoIP) service
+                                owned by technology conglomerate Meta.</p>
+                        </div>
+
+                </div></a>
+
+
+                <div class="work">
+                    <a href="./webs.html"><img src="./website.jpg" alt="">
+                        <div class="layer">
+                            <h3>The Webs</h3>
+                            <p>The Webs is a software system that provides hyperlinks to web pages and other relevant
+                                information on
+                                the Web in response.</p>
+                        </div>
+
+                </div></a>
+
+                <div class="work">
+                    <a href="./calculator.html"><img src="./calculator.jpg" alt="">
+                        <div class="layer">
+                            <h3>Calculator</h3>
+                            <p>An electronic calculator is typically a portable electronic device used to perform
+                                calculations,
+                                ranging from basic arithmetic to complex mathematics.</p>
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+    <!-- contact section -->
+    <div id="Contact">
+
+        <h1 class="Connect">Connect</h1>
+        <div class="icon">
+
+            <a href="https://www.facebook.com/"> <i class='bx bxl-meta'></i></a>
+            <a href="https://www.linkedin.com/in/rudra-wankhede-709333314/"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://join.skype.com/invite/tE4ib6Co3tq6"><i class='bx bxl-skype'></i></a>
+            <a href="https://github.com/Rudra1007/rudra_full_stack_developer"><i class='bx bxl-github'></i></a>
+            <a href="https://stackoverflow.com/"><i class='bx bxl-stack-overflow'></i></a>
+        </div>
+        <div class="form">
+            <form action="https://formsubmit.co/rudrawankhede1007@gmail.com" method="POST">
+                <input class="Alias" type="text" placeholder="Alias">
+                <input class="ContactNo" type="number" placeholder=" Contact No">
+                <textarea class="Message" name="Enter Your Message" placeholder="Enter Your Message" id="" cols="40"
+                    rows="15"></textarea>
+                    <button style="margin-right: -40%; margin-top: -50%;">Submit</button>
+
+            </form>
+
+     </div>
+     <div class="copyright">
+        <i style="margin-left: 30%;  background-color: #686D76;" class='bx bx-copyright'></i>
+        <h4 style="color: var(--main-colour); margin-left: 46%; margin-top: -2%; background-color: #686D76;">copyright by Rudra Wankhede</h4>
+
+     </div>
+
+            
+   
+
+    </div>
+</body>
+
+</html>

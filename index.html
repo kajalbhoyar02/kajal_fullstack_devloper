@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-container {
+            height: 180vh;
+            width: 100vw;
+            background-color: #101820;
+        }
+
+        .row-one {
+            text-decoration-color: aliceblue;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            color: aliceblue;
+        }
+
+        .text {
+            color: aliceblue;
+            text-align: center;
+            font-size: xx-large;
+            box-shadow: 1px 1px 20px yellow;
+        }
+
+        body:before {
+            content: "";
+            position: absolute;
+            inset: 40%, -60% 0 -60%;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        nav {
+            position: relative;
+        }
+
+        .button-hower {
+            text-shadow: #fffdef;
+            animation-name: "bounce";
+        }
+
+        .intro {
+            color: #fffdef;
+            margin-top: 40px;
+            font-size: xx-large;
+            margin-top: 100px;
+            margin-left: 220px;
+        }
+
+        .img {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-right: 10vw;
+            margin-top: -25vh;
+            filter: drop-shadow(1px 1px 20px rgb(18, 175, 187));
+        }
+
+        .function {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            box-shadow: 1px 1px 20px yellow;
+        }
+
+        .About {
+            text-align: center;
+            font-size: xx-large;
+            box-shadow: 1px 1px 20px #dcc82e;
+        }
+
+        .icon {
+            display: flex;
+            flex-direction: row;
+            margin-left: 40vw;
+            gap: 30px;
+            margin-top: -25vh;
+            align-items: center;
+
+
+        }
+
+        .link {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: -4vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .contact {
+            color: #dcc82e;
+            font-size: xx-large;
+            display: flex;
+            margin-top: 3vh;
+            margin-left: 37vw;
+        }
+    </style>
+</head>
+
+<body style="margin: 0%;">
+    <!-- main -->
+    <div class="main-container">
+        <!-- heading -->
+        <h1 class="text">
+            <img src="./image-folder/icon-img/pinkheart.png" height="40px">
+            WELCOME TO MY HOME PAGE
+            <!-- img -->
+            <img src="./image-folder/icon-img/pinkheart.png" height="40px">
+        </h1>
+
+        <!-- ROW-ONE -->
+        <div class="row-one">
+            <nav>
+                <a href="#HOME"><button class="button-hower">HOME</button></a>
+            </nav>
+
+            <nav> <a href="#ABOUT"><button class="button-hower">ABOUT</button></a></nav>
+            <nav>
+                <div id="PROJECTS">
+                    <a href="./projects.html"> <button class="button-hower">PROJECTS</a></button>
+                </div>
+            </nav>
+
+            <nav>
+                <div id="EDUCATION">
+                    <a href="./education.html"><button class="button-hower">EDUCATION</button></a>
+                </div>
+            </nav>
+            <nav> <a href="#CONTACT"><button class="button-hower">CONTACT</button></a>
+            </nav>
+        </div>
+        <!-- intro -->
+        <div>
+            <h1 style=" color: #fffdef; text-align: center; box-shadow: 1px 1px 20px yellow;">
+                INTRODUCTION</h1>
+            <hr>
+        </div>
+        <div class="intro" id="HOME">
+            <p>
+                <b>
+                    Hello !!<br>
+                    My name's is Kajal M. Bhoyar
+                    I Live at Isapur (BK),<br>TA-Katol, DIS-Nagpur, STATE-Maharashtra<br>
+                    I am a FULLSTACK Devloper.
+                    <br>
+                    I am a ANGEL.
+                    <img src="./image-folder/icon-img/pinkheart.png" height="40px">
+                </b><br>
+        </div>
+        <!-- img -->
+        <div class="img">
+            <img style="border-radius: 50%; border-style: solid; border-color: #dcc82e;"
+                src="./image-folder/self-img/kajuupic.JPEG" height="500px">
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- about -->
+        <div class="About" id="ABOUT">
+            <h1 style="color: #dcc82e; text-align: center;"> <img src="./image-folder/icon-img/love.png" height="40px">ABOUT<img
+                    src="./image-folder/icon-img/love.png" height="40px"></h1>
+        </div>
+        <div style="align-items: center;  margin-left:47%; filter: drop-shadow(1px 1px 20px #dcc82e);">
+            <a href="./resumekajal.html"><button style="text-align: center;" class="button-hower">RESUME</button></a>
+        </div>
+        <!-- contact -->
+        <div class="contact">
+            <h1>CONTACT ME</h1>
+        </div>
+        <div class="link" id="CONTACT">
+            <a href=""><img src="./image-folder/icon-img/skype.png" width="40px" height="40px"><br><button
+                    class="button-hower">SKYPE</button>
+            </a>
+            <a href="./https://secure.skype.com/portal/overview?intsrc=client-_-osx-_-8.123.0.203-_-.userInfo.myaccount&tcg=37432b18-812a-422f-9507-f03bd7635586"><img
+                    src="./image-folder/icon-img/guithub.png" width="40px" height="40px"><br><button
+                    class="button-hower">GUITHUB</button></a>
+            <a href="#"><img src="./image-folder/icon-img/linkedin.png" width="40px" height="40px"><br><button
+                    class="button-hower">LINKDIN</button></a>
+            <a href="#"><img src="./image-folder/icon-img/prtofolio.png" width="40px" height="40px"><br><button
+                    class="button-hower">PROTOFOLIO</button></a>
+        </div>
+    </div>
+    <!-- thank you -->
+    <h1 style="text-align: center; color: #fffdef;margin-top: -130px; box-shadow: 1px 1px 20px #dcc82e;">THANK YOU <img
+            src="./image-folder/icon-img/half heart.png" height="40px"></h1>
+    </div>
+</body>
+
+</html>
